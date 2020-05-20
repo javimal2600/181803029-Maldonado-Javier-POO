@@ -41,7 +41,9 @@
     <body>
         <h1>Mi formulario</h1>
         <p>Introduce un numero</p>
+        <form method="get">
             <input id="num1" type="text" name="numero" onkeypress="return solonumeros(event)" onpaste="return false">
-            <input type="submit" value="enviar" onclick="numerosucesion()">    
+            <input type="submit" value="enviar" onclick="numerosucesion()"> 
+        </form>
     </body>
 </html>
