@@ -20,15 +20,15 @@
             for(int i=1;i<=numero;i++){
                 for(int j=0;j!=i;j++){
                 out.print(j+1+" ");%>
-                <br></br>
+                
+                <%}%>
+                    <br></br>
                 <%}
-                out.print("\n");
-                }
             }else{%>
                     <form>
                         <input type="number" name="numero" required/>
                         <input type="submit" value="enviar"/>
-                     <form/>    
+                    <form/>    
                     <p>no haz ingresado un numero</p> 
         <%}%>
     </body>
