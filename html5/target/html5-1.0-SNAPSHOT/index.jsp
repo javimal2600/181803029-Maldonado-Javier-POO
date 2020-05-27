@@ -14,22 +14,19 @@
     <body>
         <h1>Numeros ascendentes</h1>
         <% if(request.getParameter("total")!=null){
+            int arreglo[]=new int[30];
+            int i,j,aux;
             int total=Integer.parseInt(request.getParameter("total"));
-            for(int i=0;i<=total;i++){%>
+            for( i=0;i<total;i++){%>
             <form>
-                <input type="number" name="numero<%=i%>" required>
-                <input type="submit" value="enviar">
-            </form>
+                <input type="number" name="<%=i%>" required>
             <% 
             }
-            
         }else{%>
-            <form action="numeros.jsp">
-            <p>Ingrese la cantidad de numeros a comparar:</p>
-            <input type="numero" name="total" min="1" required>
-            <input type="submit" value="enviar">
-            </form>
+            
         <%}%>
-        
+            <input type="number" name="total" required>
+            <input type="submit" value="enviar">
+             </form>
     </body>
 </html>

@@ -13,7 +13,6 @@
     </head>
     <body>
         <h1>PIRAMIDE DE NUMEROS</h1>
-        <p>Introduce la dimension del triangulo</p>
         <%
             if(request.getParameter("numero")!=null){
             int numero=Integer.parseInt(request.getParameter("numero"));
@@ -26,6 +25,7 @@
                 <%}
             }else{%>
                     <form>
+                        <p>Introduce la dimension del triangulo</p>
                         <input type="number" name="numero" required/>
                         <input type="submit" value="enviar"/>
                     <form/>    
