@@ -11,15 +11,10 @@
 
 public class JuegoMain {
      public static void main(String[] args){
-         Ak bronce = new Ak();
-         bronce.tipo = "Bronce";
-         bronce.cargador=5;
-         bronce.precision=75;
-         bronce.velocidadCarga=5;
-         bronce.precio=1000;
-         bronce.danio=10;
+         Ak bronce = new Ak("Bronce",5,75,5,1000,10);
          bronce.velocidadDisparo=10;
          System.out.println(bronce.toString());
+         System.out.println(bronce.disparar());
          
          Ak plata=new Ak();
          plata.tipo="Plata";

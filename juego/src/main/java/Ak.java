@@ -18,15 +18,33 @@ public class Ak {
     int danio=0;
     double velocidadDisparo=0;
     
-    //acciones-metodos, son las acciones o iteraciones del objeto
-    public void disparar(){
-        System.out.println("Te estoy disparando con un daño de"+danio);
+    //constructor con un parametro
+    public Ak(String tipo){
+        this.tipo=tipo;
     }
-    public void apuntar(){}
-    public void recargar(){}
+    //constructor con todos los atributos
+    public Ak(String tipo, int cargador, int precision,double velocidadCarga,double precio,int danio){
+        this.cargador=cargador;
+        this.danio=danio;
+        this.tipo=tipo;
+        this.precio=precio;
+        this.velocidadCarga=velocidadCarga;
+    }
+    //constructor vacio
+    public Ak(){}
+    //acciones-metodos, son las acciones o iteraciones del objeto
+    public String disparar(){
+        return "Te estoy disparando con un daño de"+danio+"pts";
+    }
+    public void apuntar(){
+        
+    }
+    public void recargar(){
+        
+    }
 
     @Override
     public String toString() {
-        return "Ak{" + "tipo=" + tipo + ", cargador=" + cargador + ", precision=" + precision + ", velocidadCarga=" + velocidadCarga + ", precio=" + precio + ", danio=" + danio + ", velocidadDisparo=" + velocidadDisparo + '}';
+        return "Ak{" + "\n tipo:" + tipo + ", \n cargador:" + cargador + ", \n precision:" + precision + ",\n velocidadCarga:" + velocidadCarga + ",\n precio:" + precio + ",\n danio:" + danio + ",\n velocidadDisparo:" + velocidadDisparo + '}';
     }
 }
