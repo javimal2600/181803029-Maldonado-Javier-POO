@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 com\mycompany\html4\resources\JavaEE8Resource.class
 com\mycompany\html4\JAXRSConfiguration.class
+=======
+com\mycompany\mayor\JAXRSConfiguration.class
+com\mycompany\mayor\resources\JavaEE8Resource.class
+>>>>>>> bb7afcf8ba1c19a2aaaacb09283751f52268e6b7
