@@ -5,6 +5,7 @@
 --%>
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%
     Connection conexion = null;
@@ -25,7 +26,7 @@
         <title>Agregar usuario</title>
     </head>
     <body>
-        <p class="text-success">Usuario agregado con exito</p>
+         <div class="alert alert-success">¡Usuario agregado con exito!</div>
         <br></br>
         <a class="btn btn-primary" href="index.jsp" role="button">Volver al inicio</a>
     </body>
