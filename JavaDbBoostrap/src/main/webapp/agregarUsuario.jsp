@@ -14,9 +14,10 @@
     try{
     Class.forName("com.mysql.jdbc.Driver");
     conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios", "root", "");
-    stmt = conexion.prepareStatement("INSERT INTO usuarios SET usuario=?, password=MD5(?)");
+    stmt = conexion.prepareStatement("INSERT INTO usuarios SET usuario=?, password=MD5(?),edad=?");
     stmt.setString(1,request.getParameter("usuario"));
     stmt.setString(2,request.getParameter("password"));
+    stmt.setString(3,request.getParameter("edad"));
     stmt.executeUpdate();
 %>
 <html>

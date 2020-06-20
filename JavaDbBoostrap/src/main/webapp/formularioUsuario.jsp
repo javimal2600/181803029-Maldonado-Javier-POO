@@ -25,6 +25,10 @@
                     <label>Contraseña:</label>
                     <input type="password" name="password" id="password" class="form-control" required/>
                 </div>
+                <div class="container">
+                    <label>Edad:</label>
+                    <input type="number" name="edad" id="edad" class="form-control" required/>
+                </div>
                 <input type="submit" value="enviar" class="btn bg-primary btn-lg"/>
                 <a href="index.jsp">Regresar</a>
             </form>

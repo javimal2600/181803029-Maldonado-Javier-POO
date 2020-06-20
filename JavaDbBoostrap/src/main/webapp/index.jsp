@@ -48,6 +48,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Contraseña</th>
+                        <th scope="col">Edad</th>
                         <th scope="col">Acciones</th>
                     </thead>
                     <%
@@ -57,10 +58,11 @@
                         <td scope="row"><%= rs.getInt("id_usuarios")%></td>
                         <td scope="row"><%= rs.getString("usuario")%></td>
                         <td scope="row"><%= rs.getString("password")%></td>
+                        <td scope="row"><%= rs.getString("edad")%></td>
                         <td>
                             <a class="btn btn-warning btn-block" href="editarUsuario.jsp?id_usuarios=<%= rs.getInt("id_usuarios")%>"> Editar usuario</a>                   
-                            <a class="btn btn-primary btn-block" href="editarContraseña?id_usuarios=<%= rs.getInt("id_usuarios")%>">Editar contraseña</a>
-                            <a class="btn btn-danger btn-block" href="eliminar.jsp?id_usuarios=<%= rs.getInt("id_usuarios")%>"> Eliminar Usuario</a>
+                            <a class="btn btn-primary btn-block" href="editarContraseña.jsp?id_usuarios=<%= rs.getInt("id_usuarios")%>">Editar contraseña</a>
+                            <a class="btn btn-danger btn-block" href="eliminar.jsp?id=<%= rs.getInt("id_usuarios")%>"> Eliminar Usuario</a>
                         </td>  
                     </tr>
                     <%}%>
