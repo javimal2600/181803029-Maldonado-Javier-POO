@@ -27,7 +27,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 conexion = DriverManager.getConnection("jdbc:mysql://localhost/videojuegos ", "root", "");
                 stmt = conexion.createStatement();
-                rs = stmt.executeQuery("Select * from juegos ");
+                rs = stmt.executeQuery("SELECT juegos.id_juego, juegos.nombre, juegos.descripcion, cat_categorias.nombre as categorias, juegos.fecha_lanzamiento, juegos.precio FROM `juegos` JOIN cat_categorias on juegos.id_categoria=cat_categorias.id_categoria");
             } catch (Exception e) {
                 out.println("Error: " + e);
             }
@@ -39,7 +39,7 @@
                 <th class="text-center">Id</th>
                 <th class="text-center">Nombre</th>
                 <th class="text-center">Descripcion</th>
-                <th class="text-center">Categoria(Id)</th>
+                <th class="text-center">Categoria</th>
                 <th class="text-center">Fecha Lanzamiento</th>
                 <th class="text-center">Precio</th>
             </tr>
@@ -48,7 +48,7 @@
                 <td class="text-center"><%out.println(rs.getInt("id_juego")); %></td>
                 <td class="text-center"><%out.println(rs.getString("nombre")); %></td>
                 <td class="text-center"><%out.println(rs.getString("descripcion")); %></td>
-                <td class="text-center"><%out.println(rs.getInt("id_categoria")); %></td>
+                <td class="text-center"><%out.println(rs.getString("categorias")); %></td>
                 <td class="text-center"><%out.println(rs.getDate("fecha_lanzamiento")); %></td>
                 <td class="text-center"><%out.println("$"+rs.getDouble("precio")); %></td>
             </tr>
